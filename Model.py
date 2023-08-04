@@ -34,7 +34,7 @@ class NlEncoder(nn.Module):
         self.conv = nn.Conv2d(self.embedding_size, self.embedding_size, (1, 10))
         self.resLinear2 = nn.Linear(self.embedding_size, 1)
 
-    def forward(self, input_node, inputtype, inputad, res, inputtext, linenode, linetype, linemus):
+    def forward(self, input_node, inputtype, inputad, res, inputtext, linenode):
         nlmask = torch.gt(input_node, 0)
         resmask = torch.eq(input_node, 2)#torch.gt(res, 0)
         inputad = inputad.float()

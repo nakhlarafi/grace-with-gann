@@ -620,7 +620,7 @@ class SumDataset(data.Dataset):
         print("error1: %d error2: %d"%(error1, error2))
 
         #assert(0)#assert(0)
-        batchs = [Nodes, Types, inputNlad, Res, inputText, LineNodes, LineTypes, LineMus]
+        batchs = [Nodes, Types, inputNlad, Res, inputText, LineNodes]
         self.data = batchs
         open(self.proj + "data.pkl", "wb").write(pickle.dumps(batchs, protocol=4))
         #open('nl_voc.pkl', 'wb').write(pickle.dumps(self.Nl_Voc))
